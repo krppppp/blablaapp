@@ -1,0 +1,15 @@
+current directory: /Users/krppppp/ba/vendor/bundle/gems/debug_inspector-0.0.3/ext/debug_inspector
+/Users/krppppp/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20180924-7114-1g0cbrw.rb extconf.rb
+creating Makefile
+
+current directory: /Users/krppppp/ba/vendor/bundle/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR=" clean
+
+current directory: /Users/krppppp/ba/vendor/bundle/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR="
+compiling debug_inspector.c
+linking shared-object debug_inspector.bundle
+
+current directory: /Users/krppppp/ba/vendor/bundle/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 debug_inspector.bundle ./.gem.20180924-7114-15ii8hs

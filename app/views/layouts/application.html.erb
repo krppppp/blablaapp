@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ba</title>
-    <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <head>
+      <title>blablaapp</title>
+      <%= csrf_meta_tags %>
+      <%= stylesheet_link_tag 'application', media: 'all' %>
+      <%= javascript_include_tag 'application' %>
+      <%= favicon_link_tag('love.png') %>
+      <%= analytics_init if Rails.env.production? %>
+      <script src="https://use.fontawesome.com/61a7970697.js"></script>
+      <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="content-language" content="ja">
+        <meta name="theme-color" content="#001321"/>
+        <link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet">
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
   </head>
 
   <body>

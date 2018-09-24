@@ -5,6 +5,14 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'unicorn'
+gem 'gon'
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-oauth2'
+gem 'omniauth-facebook'
+gem 'payjp'
+gem 'google-analytics-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.6'
@@ -32,12 +40,45 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# bootstrap 4
+gem 'popper_js', '~> 1.12.9'
+gem 'bootstrap', '~> 4.0.0'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :development, :test do
+gem 'bcrypt-ruby', '3.1.1.rc1', :require => 'bcrypt'
+gem 'geocoder'
+gem 'geokit-rails'
+gem 'jp_prefecture'
+gem 'carrierwave'
+gem 'fog-aws'
+gem 'rmagick'
+gem 'fog'
+gem 'ransack'
+gem 'select2-rails'
+gem 'cocoon'
+gem 'virtus'
+gem 'kaminari'
+
+group :development, :staging, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'rename'
+  gem 'pry-rails'                 # rails console(もしくは、rails c)でirbの代わりにpryを使われる
+  gem 'pry-doc'                   # methodを表示
+  gem 'pry-byebug'                # デバッグを実施(Ruby 2.0以降で動作する)
+  gem 'pry-stack_explorer'        # スタックをたどれる
+  gem 'rspec-rails'               # テスト用gem
+  gem 'factory_bot_rails'         # テスト用データ作成gem
+  gem 'guard-rspec'               # テスト効率アップ用
+  gem 'rails-controller-testing'  # テスト効率アップ
+  gem 'simplecov'                 # テストカバレッチ確認用
+  gem 'brakeman'                  # セキュリティ確認用
+  gem 'annotate'                  # dbのカラムをモデルにコメントとして記述
+  gem 'rubocop', require: false
+  # gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :development do
@@ -47,6 +88,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'traceroute'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
