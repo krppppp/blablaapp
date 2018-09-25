@@ -4,15 +4,17 @@
 
 
 .top-background {
-  height: 100%;
-  width: 100%;
+  background-image: url(top.png);
+  background-size: cover;
+  height: 800px;
+  width: 1200px;
 }
 
-.login-button{
+.top-rainbow{
   font-family: Sans-Serif;
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 20px;
+  left: 20px;
   background: #000;
   z-index: 2;
   .shadow {
@@ -47,5 +49,82 @@
     100%{
       background-position: 0 0 ;
     }
+  }
+}
+
+.top-next {
+  font-family: Sans-Serif;
+  height: 60px;
+  width: 190px;
+  position: absolute;
+  top: 75%;
+  left: calc(50% - 95px);
+
+  a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 185px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+  }
+
+  span {
+    position: absolute;
+    display: block;
+    text-align: center;
+    line-height: 60px;
+    font-size: 26px;
+    background: rgba(255, 255, 255, 0.05);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 30px;
+    text-transform: uppercase;
+    color: #fff;
+    transition: 1s;
+    padding: 0px 50px;
+  }
+  span.front{
+    transform: rotateX(0deg) translateZ(20px);
+  }
+  a:hover > span.front{
+    transform: rotateX(-180deg) translateZ(20px);
+  }
+  span.back{
+    transform: rotateX(180deg) translateZ(20px);
+  }
+  a:hover > span.back{
+    transform: rotateX(0deg) translateZ(20px);
+  }
+  span.center{
+    background: linear-gradient(to left ,#c31a5b, #7129bd);
+    height: 60px;
+    width: 85px;
+  }
+
+  span.center:before{
+    position: absolute;
+    left: 0px;
+    height: 60px;
+    width: 185px;
+    content: '';
+    background: linear-gradient(to left ,#ffdd1f, #c31a5b);
+    border-radius: 30px;
+    transform:translateZ(-1px);
+  }
+
+  a:hover > span.center {
+    transform: rotateX(-180deg) translateZ(20px);
   }
 }
